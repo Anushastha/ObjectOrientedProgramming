@@ -434,3 +434,72 @@ class equal1 {
         }
     }
 }
+//12.Write a program to enter the values of two variables 'a' and 'b' from keyboard and then check if both the conditions
+// 'a < 50' and 'a < b' are true.
+class check{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int a ,b;
+        System.out.print("Enter the value of a: ");
+        a = scanner.nextInt();
+        System.out.print("Enter the value of b: ");
+        b = scanner.nextInt();
+        if (a < 50 && a < b)
+        {
+            System.out.print("Both the conditions are true");
+        }
+        else if (a < 50 || a < b){
+            System.out.print("Only one condition is true");
+        }
+        else {
+            System.out.print("None of the conditions are true");
+        }
+    }
+}
+//12.1
+class check1{
+    public static void main(String[] args) {
+        int a,b;
+        a = Integer.parseInt(JOptionPane.showInputDialog(null,"Enter the value of a: "));
+        b = Integer.parseInt(JOptionPane.showInputDialog(null,"Enter the value of b: "));
+        if (a < 50 && a < b){
+            JOptionPane.showMessageDialog(null,"Both the conditions are true.");
+        }
+        else if (a < 50 || a < b){
+            JOptionPane.showMessageDialog(null,"Only one condition is true.");
+        }
+        else {
+            JOptionPane.showMessageDialog(null,"None of the conditions are true.");
+        }
+    }
+}
+
+//13. If the marks of Robert in three subjects are entered through keyboard (each out of 100 ),
+// write a program to calculate his total marks and percentage marks.
+class robert{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        float English,Math,Science,total,per;
+        System.out.print("Enter the marks in English: ");
+        English = scanner.nextFloat();
+        System.out.print("Enter the marks in Math: ");
+        Math = scanner.nextFloat();
+        System.out.print("Enter the marks in Science: ");
+        Science = scanner.nextFloat();
+        total = English+Math+Science;
+        per = ((total/300)*100);
+        System.out.print("The total marks is "+total+" and the percentage is "+per);
+    }
+}
+//13.1
+class robert1{
+    public static void main(String[] args) {
+        float English,Math,Science,total,per;
+        English = Float.parseFloat(JOptionPane.showInputDialog(null,"Enter the marks in English:"));
+        Math = Float.parseFloat(JOptionPane.showInputDialog(null,"Enter the marks in Math: "));
+        Science = Float.parseFloat(JOptionPane.showInputDialog(null,"Enter the marks in Science: "));
+        total = English+Math+Science;
+        per = ((total/300)*100);
+        JOptionPane.showMessageDialog(null,"The total marks is "+total+" and percentage is "+per);
+    }
+}
