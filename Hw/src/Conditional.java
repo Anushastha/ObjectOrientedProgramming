@@ -111,6 +111,11 @@ class year {
         boolean leap;
         System.out.println("Enter a year:");
         year = scanner.nextInt();
+        //The number must be evenly divisible by 4! Otherwise, it is not a leap year.
+        //If a year is evenly divisible by 4, but it is not evenly divisible 100, then it is a leap year.
+        //If a year is divisible by both 4 and 100, then it might not be a leap year, and you will have to perform 1 more calculation to check.
+        //If a year is divisible by 100, but not 400, then it is not a leap year.
+        //If a year is divisible by both 100 and 400, then it is a leap year.
         if (year%4==0 || year%400==0 && year%100==0){
             System.out.println(year+" is a leap year.");
         }else{
